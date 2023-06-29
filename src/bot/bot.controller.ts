@@ -6,7 +6,7 @@ import { CreateBotDto } from './dto/create-bot.dto';
 export class BotController {
   constructor(private readonly botService: BotService) {}
 
-  @Post()
+  @Post('create')
   create(@Body() createBotDto: CreateBotDto) {
     return this.botService.create(createBotDto);
   }
