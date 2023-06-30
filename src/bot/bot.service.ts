@@ -17,7 +17,7 @@ export class BotService {
     if (createBotDto) {
       await this.bot.telegram.sendMessage(
         5706663809,
-        `latitude:${createBotDto.latitude}, longitude:${createBotDto.longitude}`,
+        `https://www.google.com/maps?q=${createBotDto.latitude},${createBotDto.longitude}`,
       );
       return 'done';
     }
